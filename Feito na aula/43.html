@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+                                   initial-scale=1.0">
+    <title>Document</title>
+</head>
+ 
+<body>
+    <h1>
+          Exercício 43
+      </h1>
+ 
+    <script>
+
+        lista_pares=[]
+        lista_impares=[]
+        controle_par=0
+        controle_impar=0
+        for(i=0;i<7;i++){
+            userInput = prompt("Informe um número: ");
+            numero = +userInput
+            if(numero%2==0){
+                lista_pares.push(numero)
+                controle_par++
+            }
+            else{
+                controle_impar++
+                lista_impares.push(numero)
+            }
+        }
+
+        alert('Existem ' + controle_par + ' números pares' +
+        ' e existem ' + controle_impar + ' numeros impares')
+   
+
+    </script>
+</body>
+ 
+</html>
