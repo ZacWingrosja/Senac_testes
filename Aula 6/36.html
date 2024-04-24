@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Par ou Ímpar</title>
+</head>
+<body>
+    <h1>Jogo de Par ou Ímpar</h1>
+    <label for="userNumber">Digite um número:</label>
+    <input type="number" id="userNumber" placeholder="Seu número aqui">
+    <button onclick="playGame()">Jogar</button>
+    <p id="result"></p>
+
+    <script>
+        function playGame() {
+            const userNumber = parseInt(document.getElementById('userNumber').value);
+            if (isNaN(userNumber)) {
+                alert("Por favor, insira um número válido.");
+                return;
+            }
+
+            const computerNumber = Math.floor(Math.random() * 10) + 1; // Computador escolhe um número entre 1 e 10
+            const sum = userNumber + computerNumber;
+            const outcomes = ["Par", "Ímpar"]; // Índice 0 para par, índice 1 para ímpar
+            const result = outcomes[sum % 2];
+
+            let message = `Seu número: ${userNumber}\nNúmero do computador: ${computerNumber}\nSoma: ${sum} - Resultado: ${result}\n`;
+            if (result === "Par") {
+                message += "Você venceu!";
+            } else {
+                message += "O computador venceu!";
+            }
+
+            document.getElementById('result').textContent = message;
+        }
+    </script>
+</body>
+</html>
