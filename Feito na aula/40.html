@@ -1,0 +1,40 @@
+<!-- Isso é uma comentário em HTML -->
+<!-- Utilize esse arquivo como base para fazer os exercícios da Aula 03 -->
+<!-- Abra esse arquivo no seu Navegador, edite ele, e recarregue a página no navegador -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+                                   initial-scale=1.0">
+    <title>Document</title>
+</head>
+ 
+<body>
+    <!-- Título da Página -->
+    <h1>
+          Exercício 40 Somar e Calcular a média dos Numeros Digitados
+      </h1>
+ 
+    <!-- Aqui começa a parte de código com JS -->
+    <script>
+        
+    soma = 0;
+
+    for(i = 0; i < 10; i++){
+    userInput = prompt("Informe 10 Numeros: ");
+    numero = +userInput
+    soma += numero;
+    }
+
+    media = soma / 10;
+
+    alert("Soma dos números: " + soma + "\nMédia dos números: " + media);
+
+    </script>
+    <!-- Aqui termina a parte de código com JS -->
+</body>
+ 
+</html>
